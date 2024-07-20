@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <button id="btn">영화 정보 요청하기</button>
+    <div id="movie"></div>
+
+    <script>
+        // 버튼을 클릭했을 때 영화정보를 받아와서 출력
+        // 통신을 하기 위해서는 필요한 구성
+        // 1. 요청과 응답을 할 주소가 필요하다.
+        // 2. 통신 방법 작성 (get, post)
+        // 3. 넘길 데이터를 작성
+        // 4. 성공과 실패할 때 처리할 공간
+        $('#btn').click(function(){
+            $.ajax({
+                // 1. 데이터를 요청할 서버의 주소(필수)
+                url: 'https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=&targetDt=20240624',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data){
+                    // 데이터 출력
+                    const boxOfficeResult = data.boxOfficeResult;
+                    const dailyBoxOfficeList = boxOfficeResult.dailyBoxOfficeList;
+                    
+                    let movieInfoHtml = '<h2>영화 정보</h2><ul>';
+
+                    dailyBoxOfficeList.forEach(movie => {
+                        movieInfoHtml += `<li>
+                            <strong>순위:</strong> ${movie.rank} <br>
+                            <strong>제목:</strong> ${movie.movieNm} <br>
+                            <strong>개봉일:</strong> ${movie.openDt} <br>
+                            <strong>관객 수:</strong> ${movie.audiCnt}명 <br>
+                            <strong>누적 관객 수:</strong> ${movie.audiAcc}명
+                        </li>`;
+                    });
+
+                    movieInfoHtml += '</ul>';
+                    $('#movie').html(movieInfoHtml);
+                },
+                error: function(){
+                    alert('영화 정보를 가져오는 데 실패했습니다.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

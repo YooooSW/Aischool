@@ -1,0 +1,9 @@
+package 동물;
+
+public class Mammal {
+	
+	public void baby() {
+		System.out.println("새끼를 낳다");
+	}
+	
+}

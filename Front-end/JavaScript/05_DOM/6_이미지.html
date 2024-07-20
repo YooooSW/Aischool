@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="img" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F311%2F2024%2F06%2F19%2F0001739028_001_20240619184712210.jpg&type=a340">
+    <br>
+    <button onclick="changeImg()">이미지 변경</button>
+    <script>
+        // 일반적인 사고 -> 버튼을 눌렀을 때, 이미지태그의 src를 변경!
+        const changeImg = () =>{
+            document.getElementById("img").src = "https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F076%2F2024%2F06%2F18%2F2024061801001368800186361_20240618230412617.jpg&type=a340";
+        }
+    </script>
+</body>
+</html>
+

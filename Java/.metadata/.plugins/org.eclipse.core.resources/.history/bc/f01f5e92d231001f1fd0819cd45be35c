@@ -1,0 +1,5 @@
+package 학생정보관리프로그램;
+// Data Transfer Object 자료형 전송 객체
+public class StudentDTO {
+
+}

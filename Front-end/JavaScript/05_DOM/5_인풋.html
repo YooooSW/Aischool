@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input-text">
+    <button onclick="printText()">인풋값 출력</button>
+
+    <script>
+        const printText = () => {
+            let data = document.getElementById('input-text').value;
+            alert(data);
+        }
+    </script>
+</body>
+</html>

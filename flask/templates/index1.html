@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>청년 정책 목록</title>
+</head>
+<body>
+    <h1>청년 정책 목록</h1>
+    <form method="get" action="/">
+        <input type="text" name="query" placeholder="정책 검색">
+        <button type="submit">검색</button>
+    </form>
+    <p>{{ policies }}</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>정책명</th>
+                <th>정책소개</th>
+                <th>지원내용</th>
+                <th>사업운영기간</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for policy in policies %}
+            <tr>
+                <td>{{ policy.polyBizSjnm }}</td>
+                <td>{{ policy.polyItcnCn }}</td>
+                <td>{{ policy.sporCn }}</td>
+                <td>{{ policy.bizPrdCn }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

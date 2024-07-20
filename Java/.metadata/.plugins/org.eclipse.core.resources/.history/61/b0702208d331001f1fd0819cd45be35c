@@ -1,0 +1,19 @@
+package 학생정보관리프로그램;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+// Database Access Object 데이터베이스 접근 객체 JDBC
+public class StudentDAO {
+	
+	private static final String DB_URL = "jdbc:oracle:thin:@localhost:1521:xe";
+	   private static final String DB_USER = "hr";
+	   private static final String DB_PASSWORD = "12345";
+	   
+	   // 데이터베이스 연결 메서드
+	   private Connection getConnection() throws SQLException, ClassNotFoundException {
+	      Class.forName("oracle.jdbc.driver.OracleDriver");
+	      return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+	   }
+
+}

@@ -1,0 +1,8 @@
+package 동물;
+
+public class Penguin {
+	
+	public void slide() {
+		System.out.println("배치기");
+	}
+}

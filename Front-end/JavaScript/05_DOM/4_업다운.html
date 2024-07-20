@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="number">0</p>
+    <button onclick="increment()">+1 증가</button>
+    <button onclick="decrement()">-1 감소</button>
+
+    <script>
+        // 프로세스
+        // 1. 증가, 감소를 실행할 함수 제작
+        // 2. 각각 버튼에 제작한 함수 연결
+        // 3. 증가 로직 -> id가 number요소 안에 내용을 1씩 증가하고, 다시 증가한 값을 넣어줘!
+        // 4. 감소 로직 -> id가 number요소 안에 내용을 1씩 감소하고, 다시 감소한 값을 넣어줘!
+        // * 0보다 클때 까지만 감소시키고, 그 외에는 감소 시키지 말아라!
+        // TIP -> innerHTML, innerText로 받아온 데이터는 문자 형태 -> 숫자로 형변환
+        let count = Number(document.getElementById('number').innerText);
+
+        const increment = () => {
+            count += 1;
+            document.getElementById('number').innerText = count;
+        }
+
+        const decrement = () => {
+            if (count > 0) {
+                count -= 1;
+                document.getElementById('number').innerText = count;
+            }
+        }
+    </script>
+</body>
+</html>

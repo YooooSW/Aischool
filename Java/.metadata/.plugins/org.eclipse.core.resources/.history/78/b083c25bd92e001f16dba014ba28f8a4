@@ -1,0 +1,13 @@
+package JDBC기초;
+
+public class Ex02Update {
+
+	public static void main(String[] args) {
+		
+		// Scanner를 사용해서 사용자한테 이름 나이를 입력받아서
+		// 전공을 수정해보자
+		System.out.print("본인의 이름을 입력하세요 >> ");
+
+	}
+
+}

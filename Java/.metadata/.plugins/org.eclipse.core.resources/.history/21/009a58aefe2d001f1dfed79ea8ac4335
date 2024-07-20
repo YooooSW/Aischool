@@ -1,0 +1,13 @@
+package 동물;
+
+public class Bird {
+	
+	public void egg() {
+		System.out.println("알을 낳는다");
+	}
+	public void move() {
+		System.out.println("난다");
+	}
+	
+	
+}

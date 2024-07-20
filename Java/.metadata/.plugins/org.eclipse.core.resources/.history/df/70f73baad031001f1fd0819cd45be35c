@@ -1,0 +1,5 @@
+package 학생정보관리프로그램;
+// Database Access Object 데이터베이스 접근 객체
+public class StudentDAO {
+
+}

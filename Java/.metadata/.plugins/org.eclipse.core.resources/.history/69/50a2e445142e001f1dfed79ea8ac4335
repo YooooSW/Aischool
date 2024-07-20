@@ -1,0 +1,7 @@
+package 월급계산프로그램;
+
+public class Employee {
+	public int getMoneyPay() {
+        return pay / 12;
+    }
+}

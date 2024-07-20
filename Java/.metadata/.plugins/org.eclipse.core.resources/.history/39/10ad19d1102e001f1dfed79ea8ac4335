@@ -1,0 +1,21 @@
+package 월급계산프로그램;
+
+public class RegularEployee {
+	String empno;
+	String name;
+	int pay;
+	int bonus;
+	
+	public void RegularEmployee(String empno, String name, int pay, int bonus) {
+		this.empno = empno;
+		this.name = name;
+		this.pay = pay;
+		this.bonus = bonus;
+	}
+	public int getMoneyPay(int pay, int bonus) {
+		return (pay+bonus)/12;
+	}
+	public void print() {
+		System.out.print(empno + name + this.pay+this.bonus/12);
+	}
+}

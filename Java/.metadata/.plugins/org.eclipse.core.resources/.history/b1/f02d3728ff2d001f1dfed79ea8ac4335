@@ -1,0 +1,8 @@
+package 마우스;
+
+public class Whale {
+
+	public void move() {
+		System.out.println("헤엄치다");
+	}
+}

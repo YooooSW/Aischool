@@ -1,0 +1,33 @@
+package MusicPlayer;
+
+import java.util.ArrayList;
+
+import javazoom.jl.player.MP3Player;
+
+public class Controller2 {
+	
+	MP3Player mp3 = new MP3Player();
+	// 노래가 재생중인지 아닌지 확인 후 노래를 멈추는 기능
+	// musicStop() : void
+	public void musicStop() {
+		if (mp3.isPlaying()) {
+            mp3.stop();
+            System.out.println("정지되었습니다.");
+        } else {
+            System.out.println("현재 재생 중인 노래가 없습니다.");
+        }
+	}
+	
+	// 이전곡을 재생하는 기능
+	public int preMusic(int index, ArrayList<Music> musicList) {
+		
+		if (index > 0) {
+            index--;
+        } else {
+            index = musicList.size() - 1;
+        }
+		
+		mp3.play(musicList.get(index).getPath());
+	}
+	
+}

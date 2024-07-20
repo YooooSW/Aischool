@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 계층선택자 : 특정위치의 요소를 계층적 구조로 요소 선택
+            태그에 아이디, 클래스와 같은 구분자가 없는 경우 포함관계를 가지고 구별
+            1) 부모,자식관계 -> 특정태그가 다른태그를 포함한 경우
+                - 자식선택자 (>꺽쇠) 출발지(상위태그) > 도착지(하위태그)
+                - 자손선택자 ( 공백) 내 밑에 있는 모든 태그 포함
+            2) 형제관계 -> 서로 포함하고 있지는 않지만, 부모가 같은 태그(li)
+                - 인접형제 (+) -> 나를 기준으로 내 바로 다음 형제
+                - 후행형제 (~) -> 나를 기준으로 내 뒤에있는 모든 형제
+        */
+
+        li {
+            color: red;
+        }
+        /* ul상위  */
+        ul > li {
+            color: blue;
+        }
+        /* span태그입니다 -> 초록색 */
+        li > span {
+            color: green;
+        }
+        ol > li > span {
+            color: yellow;
+        }
+        h1+p {
+            color: blueviolet;
+        }
+        /* p태그 2번을 orange색으로 출력 */
+        h1+p+p {
+            color: orange;
+        }
+        ul>li:nth-child(2) {
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>여긴 h1태그</h1>
+    <p>여긴 p태그1</p>
+    <p>여긴 p태그2</p>
+    <ul>
+        <li>li태그 1</li>
+        <li>li태그 2</li>
+        <li>
+            <span>span태그입니다.</span>
+        </li>
+    </ul>
+    <ol>
+        <li>li태그3</li>
+        <li>li태그4</li>
+        <li>
+            <span>span태그입니다.</span>
+        </li>
+    </ol>
+</body>
+</html>

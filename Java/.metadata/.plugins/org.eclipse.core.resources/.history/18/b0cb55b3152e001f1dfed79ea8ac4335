@@ -1,0 +1,14 @@
+package 월급계산프로그램;
+
+public class Employee {
+	
+	String empno;
+	String name;
+	int pay;
+	
+	public int getMoneyPay() {
+        if(bonus>0) {
+        	System.out.println(empno+":"+name+":"+pay);
+        }
+    }
+}

@@ -1,0 +1,82 @@
+package 동물;
+
+class Animal {
+    String gender; // 성별
+    String eat;    // 밥 먹기
+    String sleep;  // 잠자기
+
+    void move() {
+        System.out.println("움직인다");
+    }
+}
+
+class Bird extends Animal {
+    void egg() {
+        System.out.println("알을 낳는다");
+    }
+
+    @Override
+    void move() {
+        System.out.println("난다");
+    }
+}
+
+// Penguin 클래스, Bird를 상속
+class Penguin extends Bird {
+    void slide() {
+        System.out.println("미끄러진다");
+    }
+}
+
+// Eagle 클래스, Bird를 상속
+class Eagle extends Bird {
+    // Eagle은 Bird와 같은 move 메서드를 사용
+}
+
+// Mammal 클래스, Animal을 상속
+class Mammal extends Animal {
+    void baby() {
+        System.out.println("새끼를 낳다");
+    }
+}
+
+// Whale 클래스, Mammal을 상속
+class Whale extends Mammal {
+    @Override
+    void move() {
+        System.out.println("헤엄친다");
+    }
+}
+
+// Pachooong 클래스, Animal을 상속
+class Pachooong extends Animal {
+    // Pachooong 클래스에 대한 추가 정보가 없으므로 기본 Animal 클래스의 기능을 상속
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // 각 클래스의 인스턴스 생성 및 메서드 호출 테스트
+        Bird bird = new Bird();
+        bird.egg();
+        bird.move();
+
+        Penguin penguin = new Penguin();
+        penguin.egg();
+        penguin.move();
+        penguin.slide();
+
+        Eagle eagle = new Eagle();
+        eagle.egg();
+        eagle.move();
+
+        Mammal mammal = new Mammal();
+        mammal.baby();
+
+        Whale whale = new Whale();
+        whale.baby();
+        whale.move();
+
+        Pachooong pachooong = new Pachooong();
+        pachooong.move();
+    }
+}

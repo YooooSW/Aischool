@@ -1,0 +1,16 @@
+package 마우스;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		BallMouse ball = new BallMouse();
+		
+		ball.leftClick();
+		ball.rightClick();
+		
+		
+		
+	}
+
+}

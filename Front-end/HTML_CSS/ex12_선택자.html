@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 선택자 정리
+        1) 그룹선택자 : 여러개의 태그(선택자)에 동일한 스타일을 적용할때 사용 -> , 연결
+        2) 전체선택자(*) : html 파일안에 있는 모든 태그에게 적용
+        <특정 태그들에 고유한 이름을 지정하여 디자일을 줄때>
+        3) 클래스선택자 vs 아이디선택자
+            - 차이점 : 클래스(중복가능), 아이디(중복불가능 / 고유한값)
+            - 사용법 : 클래스(.), 아이디(#)
+            - 주의점 : 아이디를 부여한 태그에도 클래스 부여가능 (단, 우선순위가 존재)
+            - 우선순위 : 중복되는 스타일이 있다면 우선순위가 높은 값을 사용
+            - 점수 : 클래스(10점), 아이디(100점)
+        */
+
+        /* h1, h2, h3 {
+            color: blue;
+        } */
+        * {
+            color: blue;
+        }
+
+        /* 태그명 기호 클래스 이름 */
+        .man {
+            color: green;
+        }
+
+        #yh {
+            color: violet
+        }
+    </style>
+</head>
+<body>
+    <h1 id="yh">최영화</h1>
+    <h1 class="man">양준영</h1>
+    <h1 class="man">김지호</h1>
+
+    <h2>Java</h2>
+    <h2 class="man">DB</h2>
+    <h2 class="man">HTML</h2>
+
+    <h3>웹2(B)</h3>
+</body>
+</html>
